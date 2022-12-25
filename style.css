@@ -15,8 +15,7 @@
 /*
   3. Allow percentage-based heights in the application
 */
-html,
-body {
+html {
   height: 100%;
 }
 /*
@@ -27,6 +26,11 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: hsl(212, 45%, 89%);
+  min-height: 100vh;
 }
 /*
   6. Improve media defaults
@@ -65,49 +69,29 @@ html {
   font-family: 'Outfit', sans-serif;
 }
 
-main {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  background-color: hsl(212, 45%, 89%);
-  height: 100%;
-}
-
 .flex {
   display: grid;
   text-align: center;
   background-color: hsl(0, 0%, 100%);
-  max-width: 30%;
+  max-width: 300px;
   border-radius: 10px;
 }
 
-@media (max-width: 600px) {
-  .flex {
-    max-width: 50%;
-  }
-}
-
-@media (max-width: 375px) {
-  .flex {
-    max-width: 70%;
-  }
-}
-
 .qr-code {
-  padding: 12px;
+  padding: 1rem;
   border-radius: 20px;
 }
 
 .title {
   font-size: 1.2rem;
-  padding: 5px 12px;
+  padding: 0.5rem 1rem;
   font-weight: 700;
 }
 
 .paragraph {
   font-size: 15px;
   font-weight: 400;
-  padding: 5px 12px 30px 12px;
+  padding: 0.5rem 1rem 2rem 1rem;
   color: hsl(220, 15%, 55%);
 }
 
